@@ -34,7 +34,7 @@ public class Config {
     @Value("#{systemProperties['os.name']}")
     private String OsProperties;
 
-    //注入其他 bean的属性
+    //注入其他 bean的属性, 注意这个地方 demoService-->也就是类名一定要首字符小写,不然会报错.Property or field 'DemoService' cannot be found on object of type
     @Value("#{demoService.another}")
     private String beautifulGril;
 
