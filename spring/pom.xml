@@ -21,13 +21,14 @@
             <artifactId>spring-context</artifactId>
             <version>${spring-framework.version}</version>
         </dependency>
-        <!-- spring aop支持 -->
+        <!-- spring aop支持  面向切面编程-->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-aop</artifactId>
             <version>${spring-framework.version}</version>
         </dependency>
-        <!-- aspectj支持 -->
+        <!-- aspectj支持  切面编程 -->
+        <!-- 名词 : 切点 pointCut  ;连接点 : JoinPoint-->
         <dependency>
             <groupId>org.aspectj</groupId>
             <artifactId>aspectjrt</artifactId>
