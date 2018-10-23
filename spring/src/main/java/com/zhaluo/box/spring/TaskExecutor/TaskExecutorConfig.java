@@ -11,7 +11,7 @@ import java.util.concurrent.Executor;
 
 @Configuration
 @ComponentScan("com.zhaluo.box.spring.TaskExecutor")
-@EnableAsync
+@EnableAsync  //开启异步
 public class TaskExecutorConfig implements AsyncConfigurer {
 
     @Override
