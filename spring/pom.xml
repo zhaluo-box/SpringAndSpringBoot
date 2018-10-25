@@ -9,7 +9,7 @@
     </parent>
     <artifactId>spring</artifactId>
     <packaging>war</packaging>
-    <name>spring demo</name>
+    <name>spring</name>
 
     <properties>
         <java.version>1.8</java.version>
