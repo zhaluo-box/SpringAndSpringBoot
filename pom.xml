@@ -11,6 +11,7 @@
     <modules>
         <module>spring</module>
         <module>domain</module>
+        <module>zhaluoSpringMVC</module>
     </modules>
 
     <properties>
