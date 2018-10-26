@@ -3,6 +3,8 @@
 /.idea
 /out
 *.iml
+*.eml
+
 
 # Compiled class file
 *.class
@@ -34,11 +36,12 @@
 .springBeans
 .sts4-cache
 
-### IntelliJ IDEA ###
+### IntelliJ IDEA  过滤eml文件###
 .idea
 *.iws
 *.iml
 *.ipr
+*.eml
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
