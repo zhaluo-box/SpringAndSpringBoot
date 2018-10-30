@@ -7,6 +7,9 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
 
+/**
+ * 主要是为了配置映射路径
+ */
 @Configuration
 @EnableWebMvc
 @ComponentScan("com.zhaluo.box.springMVC4")
@@ -21,7 +24,6 @@ public class MvcConfig  {
 
         viewResolver.setViewClass(JstlView.class);
         return viewResolver;
-
     }
 
 }

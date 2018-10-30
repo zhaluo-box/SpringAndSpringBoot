@@ -10,6 +10,8 @@ import javax.servlet.ServletRegistration.Dynamic;
 
 /**
  * web 配置
+ *  配置容器
+ *  配置容器的加载顺序
  */
 public class WebInitializer implements WebApplicationInitializer {
 
