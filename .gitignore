@@ -31,12 +31,16 @@
 .settings
 .springBeans
 .sts4-cache
+.classpath
+.project
 
 ### IntelliJ IDEA  ###
 .idea
 *.iws
 *.iml
 *.ipr
+*.eml
+*.userlibraries
 
 ### NetBeans ###
 /nbproject/private/
