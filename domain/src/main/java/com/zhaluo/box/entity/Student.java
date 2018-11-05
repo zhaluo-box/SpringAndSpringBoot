@@ -1,21 +1,9 @@
 package com.zhaluo.box.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
-import lombok.experimental.Accessors;
 
 import java.io.Serializable;
 
-
-
-@NoArgsConstructor
-@AllArgsConstructor
-@ToString
-@Accessors(chain = true)
-@Data
-public class Student  implements Serializable {
+public class Student implements Serializable {
 
     private Long sid;
 
@@ -25,4 +13,46 @@ public class Student  implements Serializable {
 
     private String address;
 
+
+    public Student(Long sid, String sname, String sex, String address) {
+        this.sid = sid;
+        this.sname = sname;
+        this.sex = sex;
+        this.address = address;
+    }
+
+    public Student() {
+    }
+
+    public Long getSid() {
+        return sid;
+    }
+
+    public void setSid(Long sid) {
+        this.sid = sid;
+    }
+
+    public String getSname() {
+        return sname;
+    }
+
+    public void setSname(String sname) {
+        this.sname = sname;
+    }
+
+    public String getSex() {
+        return sex;
+    }
+
+    public void setSex(String sex) {
+        this.sex = sex;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
 }
