@@ -164,6 +164,8 @@
             <version>4.11</version>
             <scope>test</scope>
         </dependency>
+
+
     </dependencies>
 
     <build>
@@ -187,6 +189,8 @@
                     <artifactId>maven-surefire-plugin</artifactId>
                     <version>2.20.1</version>
                 </plugin>
+
+                <!--切记要配置 webXML 为 false-->
                 <plugin>
                     <artifactId>maven-war-plugin</artifactId>
                     <version>3.2.0</version>
