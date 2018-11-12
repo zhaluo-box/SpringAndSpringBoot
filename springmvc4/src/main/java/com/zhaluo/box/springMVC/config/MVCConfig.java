@@ -5,10 +5,7 @@ import com.zhaluo.box.springMVC.Intercept.MyInterceptor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
-import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
-import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+import org.springframework.web.servlet.config.annotation.*;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
 
@@ -57,6 +54,16 @@ public class MVCConfig extends WebMvcConfigurerAdapter {
         return  new MyInterceptor();
     }
 
+
+    /**
+     * 优化页面跳转
+     * @param registry
+     */
+    @Override
+    public void addViewControllers(ViewControllerRegistry registry) {
+       registry.addViewController("/index").setViewName("/index");
+    }
+
     /**
      * 重写addInterceptors 方法 注册拦截器
      * @param registry
@@ -64,5 +71,14 @@ public class MVCConfig extends WebMvcConfigurerAdapter {
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(myInterceptor());
+    }
+
+    /**
+     * 重写configurePathMatch  不忽略 " . " 后面的参数
+     * @param configurer
+     */
+    @Override
+    public void configurePathMatch(PathMatchConfigurer configurer) {
+        configurer.setUseSuffixPatternMatch(false);
     }
 }
